@@ -1,0 +1,11 @@
+Bracket Pair Colorizer 2
+Color Highlight
+Indent Rainbow
+Lorem Ipsum
+Material Icon Theme
+Matherial Theme
+Monokai Night Theme
+Paste Json as Code
+Terminal
+Todo Highlight
+Python
