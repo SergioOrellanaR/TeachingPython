@@ -3,7 +3,6 @@ Color Highlight
 Indent Rainbow
 Lorem Ipsum
 Material Icon Theme
-Matherial Theme
 Monokai Night Theme
 Paste Json as Code
 Terminal
