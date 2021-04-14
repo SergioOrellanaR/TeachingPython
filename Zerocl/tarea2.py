@@ -17,7 +17,7 @@ def operacionTres(val1,val2,val3,val4):
     return ((val1+val2+val3)%5)
 
 def operacionCuatro(val1,val2,val3,val4):
-    return (sumaDosNumeros(val1,val2)*sumaDosNumeros(val3,val4)/10)
+    return sumaDosNumeros(val1,val2*sumaDosNumeros(val3,val4)/10)
 
 def operacionCinco(val1,val2):
     return val1 - val2
