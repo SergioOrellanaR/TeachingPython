@@ -36,6 +36,11 @@ def realizarOperaciones(val1,val2,val3,val4):
     print("Operación 1 - Operación 2: ")
     print(operacionCinco(resultadoUno, resultadoDos))
 
+def saltoBonito():
+    print("---------------------------------------")
+    print("RESULTADOS: ")
+    print("---------------------------------------")
+
 def main():
     print(mensaje("primer"))
     val1=solicitaNumero()
@@ -45,9 +50,7 @@ def main():
     val3=solicitaNumero()
     print(mensaje("cuarto"))
     val4=solicitaNumero()
-    print("---------------------------------------")
-    print("RESULTADOS: ")
-    print("---------------------------------------")
+    saltoBonito()
     realizarOperaciones(val1,val2,val3,val4)
 
 main()
