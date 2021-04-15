@@ -29,8 +29,11 @@ Multiplicación
 División
 Suma y Resta
 
+------
 
-Torpedo:
+Tarea 3:
 
-def sumaDe4Numeros(dato1,dato2,dato3,dato4):
-    return (dato1+dato2+dato3+dato4)
+Solicite ingresar al usuario la medida de 3 lados de un tríangulo, el sistema debe mostrar:
+
+1.- Perímetro del triangulo
+2.- Tipo de triangulo (Equilátero, isósceles o escaleno).
