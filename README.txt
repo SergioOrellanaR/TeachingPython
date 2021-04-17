@@ -37,3 +37,13 @@ Solicite ingresar al usuario la medida de 3 lados de un tríangulo, el sistema d
 
 1.- Perímetro del triangulo
 2.- Tipo de triangulo (Equilátero, isósceles o escaleno).
+
+------
+
+Tarea 4:
+
+Cree una clase Cajero con las siguientes propiedades: Ciudad, Dinero disponible, Banco.
+
+Con el cajero se podrá "Retirar Dinero", "Depositar dinero" y "Cambiar de Ciudad" (Esto debe hacerlo con métodos dentro de la clase).
+
+No será posible retirar dinero si el monto retirado excede a 0, debe mostrar mensaje de error correspondiente si aquello ocurre.
