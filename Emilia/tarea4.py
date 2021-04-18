@@ -7,6 +7,11 @@
 #No será posible retirar dinero si el monto retirado excede a 0, debe mostrar mensaje de error correspondiente si aquello ocurre.
 
 class Cajero:
+    #Esto debiese ir en un ENUM
+    accionDeposito = 1
+    accionRetiro = 2
+    accionCiudad = 3
+
 
     def __init__(self, ciudad, dinero, banco):
         self.ciudad = ciudad
@@ -15,8 +20,8 @@ class Cajero:
 
     def retirarDinero(self, dinero):
         if(dinero > self.dinero):
-            error()
-            self.accionCajero(2)
+            self.error()
+            self.accionCajero(self.accionRetiro)
         else:
             self.dinero -= dinero
             self.succesfull()
@@ -40,15 +45,15 @@ class Cajero:
         self.accionCajero(accion)
 
     def accionCajero(self, accion):
-        if(accion == 1):
+        if(accion == self.accionDeposito):
             print("¿Cuanto quieres depositar?")    
             trans = solicitarNumero()
             self.depositarDinero(trans)         
-        elif(accion == 2):
+        elif(accion == self.accionRetiro):
             print("¿Cuanto quieres retirar?")
             trans = solicitarNumero()
             self.retirarDinero(trans)
-        elif(accion == 3):
+        elif(accion == self.accionCiudad):
             print("¿A que ciudad quieres cambiar?")
             ciudad = input()
             self.cambiarCiudad(ciudad)
@@ -63,19 +68,21 @@ class Cajero:
     def volverAOperar(self):
         print("¿Deseas realizar otra operacion? si/no")
         respuesta = input()
-        if(respuesta == "si"):
+        valorRespuesta = respuesta == "si"
+
+        if(valorRespuesta):
             print(self.realizarOperacion())
             self.solicitarAccion()
 
-def error():
-    return print("Valor incorrecto, ingrese nuevamente.")
+    def error(self):
+        return print("Valor incorrecto, ingrese nuevamente.")
 
 def solicitarNumero():
     return int(input())
 
 def main():
-    cajeroplaza = Cajero("Valparaiso", 150000, "Santander")
-    print(f"Bienvenido a Banco {cajeroplaza.banco} ubicado en {cajeroplaza.ciudad}\n"+cajeroplaza.realizarOperacion())
-    cajeroplaza.solicitarAccion()
+    cajeroPlaza = Cajero("Valparaiso", 150000, "Santander")
+    print(f"Bienvenido a Banco {cajeroPlaza.banco} ubicado en {cajeroPlaza.ciudad}\n"+cajeroPlaza.realizarOperacion())
+    cajeroPlaza.solicitarAccion()
 
 main()
