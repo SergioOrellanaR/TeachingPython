@@ -41,6 +41,13 @@ class Cajero():
         else:
             print('Porfavor ingrese una ciudad')
     
+def ejecutarOpcion(mensaje, metodo, cajero, esNumero = True):
+    print(mensaje)
+    dinero = input()
+    if(esNumero):
+        dinero = int(dinero())
+    metodo(dinero)
+    print(cajero)
 
 def main():
     cajeroActual = Cajero('Santiago', 1000000, 'BCI')
@@ -48,20 +55,11 @@ def main():
     print('Que desea realizar? Presionar 1 : Retirar Dinero ~ 2 : Depositar Dinero ~ 3 : Cambiar Ciudad')
     opcion = int(input())
     if(opcion == 1):
-        print('Cuanto dinero desea retirar?')
-        dinero = int(input())
-        cajeroActual.retirarDinero(dinero)
-        print(cajeroActual)
+        ejecutarOpcion('Cuanto dinero desea retirar?', cajeroActual.retirarDinero, cajeroActual)
     elif(opcion == 2):
-        print('Cuanto dinero desea depositar?')
-        dinero = int(input())
-        cajeroActual.depositarDinero(dinero)
-        print(cajeroActual)
+        ejecutarOpcion('Cuanto dinero desea depositar?', cajeroActual.depositarDinero, cajeroActual)
     elif(opcion == 3):
-        print('Cual es la nueva ciudad?')
-        ciudad = str(input())
-        cajeroActual.cambiarCiudad(ciudad)
-        print(cajeroActual)
+        ejecutarOpcion('Cual es la nueva ciudad?', cajeroActual.cambiarCiudad, cajeroActual, esNumero = False)
     else:
         print('Debe ingresar una opcion del 1 al 3')
 
