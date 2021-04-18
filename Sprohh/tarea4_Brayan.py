@@ -18,7 +18,7 @@ class Cajero():
         self.banco = banco
 
     def __str__(self):
-        return (f"///INFORMACION CUENTA///\nCiudad: {self.ciudad} \nDinero Disponible: {self.dineroDisponible} \nBanco: {self.banco}")
+        return (f"///INFORMACION CAJERO///\nCiudad: {self.ciudad} \nDinero Disponible: {self.dineroDisponible} \nBanco: {self.banco}")
     
     def retirarDinero(self, valorRetiro):
         if(valorRetiro <= self.dineroDisponible):
@@ -43,25 +43,25 @@ class Cajero():
     
 
 def main():
-    cuentaBancaria = Cajero('Santiago', 1000000, 'BCI')
+    cajeroActual = Cajero('Santiago', 1000000, 'BCI')
 
     print('Que desea realizar? Presionar 1 : Retirar Dinero ~ 2 : Depositar Dinero ~ 3 : Cambiar Ciudad')
     opcion = int(input())
     if(opcion == 1):
         print('Cuanto dinero desea retirar?')
         dinero = int(input())
-        cuentaBancaria.retirarDinero(dinero)
-        print(cuentaBancaria)
+        cajeroActual.retirarDinero(dinero)
+        print(cajeroActual)
     elif(opcion == 2):
         print('Cuanto dinero desea depositar?')
         dinero = int(input())
-        cuentaBancaria.depositarDinero(dinero)
-        print(cuentaBancaria)
+        cajeroActual.depositarDinero(dinero)
+        print(cajeroActual)
     elif(opcion == 3):
         print('Cual es la nueva ciudad?')
         ciudad = str(input())
-        cuentaBancaria.cambiarCiudad(ciudad)
-        print(cuentaBancaria)
+        cajeroActual.cambiarCiudad(ciudad)
+        print(cajeroActual)
     else:
         print('Debe ingresar una opcion del 1 al 3')
 
