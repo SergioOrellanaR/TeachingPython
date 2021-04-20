@@ -47,3 +47,27 @@ Cree una clase Cajero con las siguientes propiedades: Ciudad, Dinero disponible,
 Con el cajero se podrá "Retirar Dinero", "Depositar dinero" y "Cambiar de Ciudad" (Esto debe hacerlo con métodos dentro de la clase).
 
 No será posible retirar dinero si el monto retirado excede a 0, debe mostrar mensaje de error correspondiente si aquello ocurre.
+
+------
+
+Tarea 5:
+
+Tarea: Cree la clase campeón con las propiedades Nombre, Rol y Género.
+
+Cree 2 equipos, cada uno con 5 campeones respectivamente.
+
+Equipo 1:
+Jax
+Sejuani
+Ahri
+Vayne
+Bardo
+
+Equipo 2:
+Yone
+Rengar
+Annie
+Yasuo
+Malphite
+
+El usuario debera ingresar un rol y el sistema mostrará los campeones en dicho rol. (Por ej, si ingresa jg, mostrará en pantalla 'Equipo 1: Sejuani, Equipo 2: Rengar')
