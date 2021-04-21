@@ -18,14 +18,12 @@
 def main():
     def numerosPositivos():
         listaNumeros = []
-        print('Cuantos numeros positivos desea ingresar?')
-        cantNumeros = int(input())
+        cantNumeros = int(input("Cuantos numeros positivos desea ingresar?: "))
         if(cantNumeros>0):
             i = 1
             posicionNum = 1
             while i <= cantNumeros:
-                print('Ingrese el numero '+str(i))
-                numero = int(input())
+                numero = int(input("Ingrese el numero "+str(i)+" : "))
                 if (numero>0):
                     i += 1
                     listaNumeros.append(numero)                
