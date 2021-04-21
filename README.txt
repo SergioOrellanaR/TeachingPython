@@ -71,3 +71,16 @@ Yasuo
 Malphite
 
 El usuario debera ingresar un rol y el sistema mostrará los campeones en dicho rol. (Por ej, si ingresa jg, mostrará en pantalla 'Equipo 1: Sejuani, Equipo 2: Rengar')
+
+-------
+
+Tarea 6:
+
+1.- Escriba un programa que pida al usuario ingresar una cantidad, esa cantidad será el número de veces que el usuario deberá ingresar números positivos, a continuación pida números hasta que se haya escrito la cantidad de números positivos indicada.
+
+Por ejemplo: El usuario inserta '4'.
+El programa le pedirá ingresar números hasta que haya ingresado 4 números positivos.
+
+2.- Escriba un programa que pida un número entero mayor que cero y que escriba sus divisores.
+
+3.-Escriba un programa que guarde en un diccionario los precios del valor por kilo de cada fruta (Plátano = 800, Manzana = 500, Pera = 1200 y Naranja= 1000), pregunte al usuario por una fruta, número de kilos a comprar y muestre por pantalla el precio a gastar. Si la fruta no está en el diccionario debe mostrar un mensaje informando de ello.
