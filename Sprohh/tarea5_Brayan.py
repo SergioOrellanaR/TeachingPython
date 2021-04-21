@@ -23,26 +23,19 @@ El usuario debera ingresar un rol y el sistema mostrará los campeones en dicho 
 '''
 
 class Campeon():
-    
+    equipoUno = {}
+    equipoDos = {}
+
     def __init__(self, nombre, rol, genero):
         self.nombre = nombre
         self.rol = rol
         self.genero = genero
 
     def agregarCampeonEquipoUno(self, Campeon):
-        equipoUno = {
-            self.rol: self.nombre
-        }
-        equipoUno.update()
-        return equipoUno
+        equipoUno[self.rol] = self.nombre    
 
     def agregarCampeonEquipoDos(self, Campeon):
-        equipoDos = {
-            self.rol: self.nombre
-        }
-        equipoDos.update()
-        return equipoDos
-        
+        equipoDos[self.rol] = self.nombre        
         
 def main():
     #Equipo 1
@@ -55,7 +48,7 @@ def main():
     campeon = Campeon('Vayne', 'ADC', 'Mujer')
     campeon.agregarCampeonEquipoUno(campeon)
     campeon = Campeon('Bardo', 'Supp', 'Hombre')
-    campeon.agregarCampeonEquipoUno(campeon)
+    equipoUno = campeon.agregarCampeonEquipoUno(campeon)
 
     #Equipo 2
     campeon = Campeon('Yone', 'Top', 'Hombre')
@@ -67,6 +60,9 @@ def main():
     campeon = Campeon('Yasuo', 'ADC', 'Hombre')
     campeon.agregarCampeonEquipoDos(campeon)
     campeon = Campeon('Malphite', 'Supp', 'Hombre')
-    campeon.agregarCampeonEquipoDos(campeon)
+    equipoDos = campeon.agregarCampeonEquipoDos(campeon)
+
+    print('Ingrese un rol')
+    rol = input()
 
 main()
